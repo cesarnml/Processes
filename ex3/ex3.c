@@ -10,6 +10,16 @@
 int main(void)
 {
     // Your code here
+    int returnValue = fork();
 
+    if (returnValue == 0)
+    {
+        printf("hello\n");
+    }
+    else
+    {
+        int wc = waitpid(returnValue, NULL, 0);
+        printf("goodbye\n");
+    }
     return 0;
 }
