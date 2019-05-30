@@ -16,12 +16,12 @@ int main(void)
 
     if (returnValue == 0)
     {
-        printf("Child process. fp = %p\n", fp);
+        printf("Child fp = %p\n", fp);
         fprintf(fp, "%s", "Child\n");
     }
     else
     {
-        printf("Parent process. fp = %p\n", fp);
+        printf("Parent fp = %p\n", fp);
         fprintf(fp, "%s", "Parent\n");
     }
 
